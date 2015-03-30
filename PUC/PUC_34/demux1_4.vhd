@@ -17,8 +17,10 @@ architecture Behavioral of demux1_4 is
 begin
 process(oe,adr) is
 begin
---gdy '1' na wejsciu oe, demltiplexer wlaczony
--- '0' wygasza w 3 segmenty
+--gdy '1' na wejsciu oe, demltiplexera
+-- we zostaje przepisane na Yx w zaleznosci 
+-- od wejscia adresowego
+-- '0' wygasza w 4 segmenty
 if oe = '1' then
 	if adr="00" then
 	Y0<=we; Y1<="1111"; Y2<="1111"; Y3<="1111";

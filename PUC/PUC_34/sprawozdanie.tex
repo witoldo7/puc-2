@@ -73,21 +73,23 @@
 \end{itemize}
 
 \section{Pierwszy wariant realizacji zadania}
-
+\label{sec:pierw}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{block_bcd_segment}
-	\caption{Schemat blokowy układu}
+	\caption{Schemat blokowy układu z transkodowaniem po demultipleksacji}
 	\label{fig:block_bcd_segment}
 \end{figure}
 
 \subsection{Listing kodu źródłowego dla demultipleksera:}
+\label{ssec:lkzd}
 	\lstinputlisting{demux1_4.vhd}
 
 \subsection{Listing kodu źródłowego dla dekodera BCD:}
 	\lstinputlisting{decod.vhd}
 
 \subsection{Przebiegi czasowe układu:}
+Na rysunkach:  \ref{fig:symhex0}, \ref{fig:symhex1}, \ref{fig:symhex2}, \ref{fig:symhex3}, przedstawione zostały przebiegi czasowe, na wejscie bcd ustawiono stany od 0 do 10. Symulacje kolejno przedstawiaja działanie demultipleksera dla adresowania(BT12) 0-3. Wygaszenia wszystkich segmentów dokonuje sie prze kasowanie bitu oe(SW9) na wejściu demultipleksera [rys. \ref{fig:symhex3not_oe}].
 
 \begin{figure}[H]
 	\centering
@@ -124,6 +126,18 @@
 \end{figure}
 
 \section{Drugi wariant realizacji zadania z transkodowaniem}
+Logicznie działanie układów jest identyczne, w porównaniu do układu \ref{sec:pierw} różni sie modyfikacją demultpleksera, na we/wy 8-bitowe oraz usunięciu 3 dekoderów. Symulacje czasowe są identyczne jak dla wariantu pierwszego, i zostaly pominięte.
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\linewidth]{block_segment_bcd}
+\caption{Schemat blokowy układu z transkodowaniem przed demultipleksacją}
+\label{fig:block_segment_bcd}
+\end{figure}
+
+\subsection{Listing kodu źródłowego dla demultipleksera po modyfikacji:}
+Kod został omówiny na podstawie listingu: \ref{ssec:lkzd}.
+\lstinputlisting{demux1_4_1.vhd}
+
 
 \section{Wnioski}
 \begin{itemize}
