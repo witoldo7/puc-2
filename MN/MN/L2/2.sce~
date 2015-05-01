@@ -1,0 +1,14 @@
+clc
+clear
+clf
+/*
+//clf()
+//x = (0:0.1:6.28);
+nr = linspace(%eps,5*%pi,300); //ciekawe
+x = linspace(%eps,2*%pi,10000)';
+// pamietaj damian dzielenie macierzowe proste nie jest lepiej mnozyc przez skalar niz dzielic !!!!
+//y = exp(x).*cos(x^2).*sin(x^-2);
+//plot2d(x,y*nr, style=nr)
+
+//plot2d(x,y, style=5)
+//xgrid

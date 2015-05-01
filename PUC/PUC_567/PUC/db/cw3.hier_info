@@ -1,0 +1,157 @@
+|cw3
+LEDG9 <= mod10:inst3.carry
+SW0 => mod10:inst3.dir
+SW0 => mod10:inst1.dir
+BT3 => mod10:inst3.clr
+BT3 => mod10:inst1.clr
+BT1 => mod10:inst3.clk
+bcd0[0] <= mod10:inst3.outp[0]
+bcd0[1] <= mod10:inst3.outp[1]
+bcd0[2] <= mod10:inst3.outp[2]
+bcd0[3] <= mod10:inst3.outp[3]
+bcd1[0] <= mod10:inst1.outp[0]
+bcd1[1] <= mod10:inst1.outp[1]
+bcd1[2] <= mod10:inst1.outp[2]
+bcd1[3] <= mod10:inst1.outp[3]
+LED0[0] <= decod:inst.segment7[0]
+LED0[1] <= decod:inst.segment7[1]
+LED0[2] <= decod:inst.segment7[2]
+LED0[3] <= decod:inst.segment7[3]
+LED0[4] <= decod:inst.segment7[4]
+LED0[5] <= decod:inst.segment7[5]
+LED0[6] <= decod:inst.segment7[6]
+LED0[7] <= decod:inst.segment7[7]
+LED1[0] <= decod:inst7.segment7[0]
+LED1[1] <= decod:inst7.segment7[1]
+LED1[2] <= decod:inst7.segment7[2]
+LED1[3] <= decod:inst7.segment7[3]
+LED1[4] <= decod:inst7.segment7[4]
+LED1[5] <= decod:inst7.segment7[5]
+LED1[6] <= decod:inst7.segment7[6]
+LED1[7] <= decod:inst7.segment7[7]
+
+
+|cw3|mod10:inst3
+outp[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+outp[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+outp[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+outp[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => carry.OUTPUTSELECT
+carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => carry~reg0.ACLR
+clr => temp[0].ACLR
+clr => temp[1].ACLR
+clr => temp[2].ACLR
+clr => temp[3].ACLR
+clk => carry~reg0.CLK
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+
+
+|cw3|mod10:inst1
+outp[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+outp[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+outp[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+outp[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => temp.OUTPUTSELECT
+dir => carry.OUTPUTSELECT
+carry <= carry~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clr => carry~reg0.ACLR
+clr => temp[0].ACLR
+clr => temp[1].ACLR
+clr => temp[2].ACLR
+clr => temp[3].ACLR
+clk => carry~reg0.CLK
+clk => temp[0].CLK
+clk => temp[1].CLK
+clk => temp[2].CLK
+clk => temp[3].CLK
+
+
+|cw3|decod:inst
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+segment7[0] <= <VCC>
+segment7[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment7[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment7[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment7[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment7[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment7[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment7[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cw3|decod:inst7
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+segment7[0] <= <VCC>
+segment7[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+segment7[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+segment7[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+segment7[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+segment7[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+segment7[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+segment7[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

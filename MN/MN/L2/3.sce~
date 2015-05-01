@@ -1,0 +1,10 @@
+clc
+clear
+clf
+
+
+x = linspace(%eps,2*%pi,100)';
+y = linspace(%eps,2*%pi,100)';
+z= sin(x)*cos(y')
+plot3d1(x,y,z)
+xset('colormap',jetcolormap())

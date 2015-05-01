@@ -1,0 +1,13 @@
+clear
+E1=8
+E2=3
+R1=4
+R3=4
+A=[R1,0,R3;0,0,R3;1,1,-1]
+B=[E1;E2;0]
+x1=inv(A)*B
+x2=linsolve(A,-B)
+y1=A*x1-B
+y2=A*x2-B
+N1=norm(A*x1-B,'inf')
+N2=norm(A*x2-B,'inf')

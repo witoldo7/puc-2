@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'mod10:inst3|carry'
+Slack : -1.175
+TNS   : -4.095
+
+Type  : Slow 1200mV 85C Model Setup 'BT1'
+Slack : -1.160
+TNS   : -5.007
+
+Type  : Slow 1200mV 85C Model Hold 'BT1'
+Slack : 0.359
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mod10:inst3|carry'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'BT1'
+Slack : -3.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mod10:inst3|carry'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'mod10:inst3|carry'
+Slack : -0.962
+TNS   : -3.302
+
+Type  : Slow 1200mV 0C Model Setup 'BT1'
+Slack : -0.949
+TNS   : -4.020
+
+Type  : Slow 1200mV 0C Model Hold 'BT1'
+Slack : 0.318
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mod10:inst3|carry'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'BT1'
+Slack : -3.000
+TNS   : -8.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mod10:inst3|carry'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'mod10:inst3|carry'
+Slack : -0.200
+TNS   : -0.600
+
+Type  : Fast 1200mV 0C Model Setup 'BT1'
+Slack : -0.194
+TNS   : -0.582
+
+Type  : Fast 1200mV 0C Model Hold 'BT1'
+Slack : 0.193
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mod10:inst3|carry'
+Slack : 0.194
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'BT1'
+Slack : -3.000
+TNS   : -8.320
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mod10:inst3|carry'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------
