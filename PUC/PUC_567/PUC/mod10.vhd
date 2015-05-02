@@ -3,7 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all; 
 use ieee.std_logic_arith.all;
 
-entity mod10 is
+entity mod10 is --porty we / wy
     Port(outp : out std_logic_vector(3 downto 0);
 	dir : in std_logic;   
 	carry: out std_logic;   
@@ -16,11 +16,15 @@ signal temp : std_logic_vector(3 downto 0);
 begin
 
 process(clk,clr, dir)
-begin
+begin	-- wyzeruj licznik oraz pozyczke 
 	if clr = '1' then
 		temp<="0000";
 		carry <= '0';
+	-- licz gdu narastajace zbocze na zegarze
 	elsif rising_edge(clk) then
+		--jesli dir "1" liczy do gory, oraz sprawdza stan licznika
+		--po przepelnieni zeruje sie i ustawia pozyczke na "1"
+		--analogicznie dla dir "0"
 		if dir = '1' then
 			if temp <= "1000" then
 				temp <= temp+1;

@@ -100,9 +100,11 @@ odbywa się poprzez wciskanie przycisku BUTTON1.
 	\label{fig:block_bcd_segment}
 \end{figure}
 
+Na listingu \ref{lst_mod10} zamieszczona została, implementacja w jezyku VHDL rewersyjnego licznika modulo 10. 
 
 \lstinputlisting[label=lst_mod10,caption=Rewersyjny licznik modulo 10 ,language=VHDL]{mod10.vhd}
 
+Na listingu \ref{lst_bcd} zamieszczona została, implementacja w jezyku VHDL dekodera BCD na kod wskaznika 7-segmentowego. 
 
 \lstinputlisting[label=lst_bcd,caption=Dekoder bcd na 7 segment ,language=VHDL]{decod.vhd}
 
@@ -154,6 +156,10 @@ impulsów jedności i dziesiątek, odpowiednie przypisanie wejśd liczników sku
 zwiększaniem się liczb na wyświetlaczu po wciśnięciu przycisku BUTTON1, natomiast zmniejszaniu się
 wartości po wciśnięciu przycisku BUTTON0.
 
+Do poprawnego działania drugiego wariantu konieczna była modyfikacja schematu blokowego co
+widzimy na Rysunku \ref{fig:block1}. Właściwe działanie bloku mod10\_1 (lst. \ref{lst_mod10_1}) wynika z odpowiednich modyfikacji
+kodu w języku VHDL.\\
+
 \begin{figure}[H]  % H - obraz dokladnie w tym miejscu, t - u gory etc..
 	\centering
 	\includegraphics[width=1.0\linewidth]{blok1}  % zalacza grafike z rozciagnieciem na cala linie  
@@ -161,29 +167,43 @@ wartości po wciśnięciu przycisku BUTTON0.
 	\label{fig:block1}
 \end{figure}
 
+%Licznik zostal niewiele zmodyfikowany w stosunku do pierwszego wariantu (list. \ref{lst_mod10}), oraz w wiekszości znajduje się tam komentarz do kodu. 
+
 \lstinputlisting[label=lst_mod10_1,caption=Rewersyjny licznik modulo 10 ,language=VHDL]{mod10_1.vhd}
+Przebiegi czasowe dla drugiego wariantu obrazuje Rysunek \ref{fig:symhex4} , naciskanie przycisków BT0 oraz BT1
+odpowiada zwiększaniu lub zmniejszaniu się wartości wyświetlanych na wyświetlaczu.
+Przebiegi potwierdzają poprawne działanie licznika dla drugiego wariantu realizowanego projektu.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{up_down_1_2}
-	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0)}
-	\label{fig:symhex0}
+	\caption{Przebiegi czasowe dla drugiego wariantu – ciąg impulsów BT0 oraz BT1 i widoczne
+	wartości na wyświetlaczach}
+	\label{fig:symhex4}
 \end{figure}
 
 \section{Wnioski}
 
-Celem wykonywanego dwiczenia było zapoznanie się z zasadą działania licznika, oraz jego budową
+Celem wykonywanego dwiczenia było zapoznanie się z zasadą działania licznika, oraz jego Celem wykonywanego dwiczenia było zapoznanie się z zasadą działania licznika, oraz jego budową
 koniecznymi do realizacji dwóch wariantów licznika rewersyjnego w oprogramowaniu Quartus II. Przy
-wykorzystaniu języka VHDL utworzyliśmy nowy bloczek w postaci licznika modulo 10, odpowiednie
+wykorzystaniu języka VHDL utworzono nowy bloczek w postaci licznika modulo 10, odpowiednie
 połączenie dwóch takich elementów współpracującymi z dekoderami z poprzedniego projektu w
-efekcie umożliwiało zaobserwowanie poprawnego działania licznika rewersyjnego.
+efekcie umożliwiało zaobserwowanie poprawnego działania licznika rewersyjnego. 
 
-Odpowiedni amodyfikacja schematu blokowego wraz z kilkoma zmianami w kodzie VHDL umożliwiała realizację
+Odpowiednio zrealizowany schemat blokowy wraz z funkcjonalnym kodem VHDL umożliwia poprawne działanie
 pierwszego wariantu. Utworzony projekt poddawaliśmy testom na poprawnośd działania,
-przeprowadzone symulacje są potwierdzeniem założeo projektowych. Ze względu na ograniczony
-czas przeznaczony na realizację projektu nie udało się zrealizowad drugiego wariantu, natomiast w
-wyniku analizy założeo w sprawozdaniu umieszczono możliwe sposoby realizacji pozwalających
-sfinalizowad założenia drugiej opcji.
+przeprowadzone symulacje są potwierdzeniem założeo projektowych. Drugi wariant projektu jest
+odpowiednią modyfikacją schematu blokowego pierwszej opcji, konieczne było odpowiednie
+zaimplementowanie przycisków BT0 oraz BT1 do generowania impulsów zliczających w górę o raz w
+dół. Kilka zmian w listingu bloczku modulo 10 zapewniło finalny efekt w postaci poprawnie
+działającego układu zliczającego licznika. 
+
+Podobnie jak w pierwszym przypadku po zaprogramowaniu
+układu poddawaliśmy go testom na poprawnośd. Jednym z pojawiających się problemów przy
+realizacji projektu było nie poprawne zliczanie impulsów w przypadku zmiany kierunku zliczania dla
+skrajnych wartości na wyświetlaczu (np. dla wartości 9, 19, 10, 20 itp.). Pojawiający problem u dało
+się jednak wyeliminowad poprzez odpowiednią modyfikację kodu VHDL bloczku mod\_10.
+
 
 
 
