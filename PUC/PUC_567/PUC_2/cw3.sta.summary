@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.509
+TNS   : -7.879
+
+Type  : Slow 1200mV 85C Model Setup 'mod10_1:inst6|carry'
+Slack : -1.153
+TNS   : -4.287
+
+Type  : Slow 1200mV 85C Model Hold 'mod10_1:inst6|carry'
+Slack : 0.133
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.356
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mod10_1:inst6|carry'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.275
+TNS   : -6.534
+
+Type  : Slow 1200mV 0C Model Setup 'mod10_1:inst6|carry'
+Slack : -0.940
+TNS   : -3.468
+
+Type  : Slow 1200mV 0C Model Hold 'mod10_1:inst6|carry'
+Slack : 0.142
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.310
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mod10_1:inst6|carry'
+Slack : -1.000
+TNS   : -4.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.376
+TNS   : -1.695
+
+Type  : Fast 1200mV 0C Model Setup 'mod10_1:inst6|carry'
+Slack : -0.186
+TNS   : -0.563
+
+Type  : Fast 1200mV 0C Model Hold 'mod10_1:inst6|carry'
+Slack : 0.022
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -11.512
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mod10_1:inst6|carry'
+Slack : -1.000
+TNS   : -4.000
+
+------------------------------------------------------------

@@ -65,7 +65,7 @@
   \studentinfo{Tomasz Marecik}{127374}
 }
 
-\title{Zadanie : Do setki !!!!!!!!!!!!}
+\title{Zadanie : Projekt licznika rewersyjnego.}
 
 %\lstinputlisting{block1.vhdl}
 %\vskip 2\baselineskip
@@ -75,66 +75,117 @@
 
 \section{Cel ćwiczenia:}
 % tu tekst
-\lipsum[1]
+Używając języka VHDL zrealizowad projekt licznika rewersyjnego dla dwóch możliwych wariantów: 
+
+- stan licznika wyświetlany na dwóch wyświetlaczach siedmiosegmentowych, zliczanie układu w górę
+oraz w dół sterowane za pomocą przełącznika suwakowego SW0, przycisk BUTTON1 źródłem
+zliczania impulsów
+
+- stan licznika wyświetlany na dwóch wyświetlaczach siedmiosegmentowych, zliczanie układu w górę
+po wciśnięciu przycisku BUTTON1, natomiast zliczanie układu w dół po wciśnięciu przycisku BUTTON0
+
 
 \section{Pierwszy wariant realizacji zadania}
 \label{sec:pierw} % tworzy etykiete do ktorej sie mozna odwolac 
+Realizacja pierwszego wariantu polegała na połączeniu dwóch liczników modulo 10 do zliczania
+impulsów jedności i dziesiątek, odpowiednie przypisanie wejśd liczników skutkuje zwiększaniem się
+liczb na wyświetlaczu po ustawieniu przełącznika suwakowego w pozycji górnej, natomiast
+zmniejszaniu się wartości po ustawieniu przełącznika SW0 w pozycji dolnej. Zliczanie impulsów
+odbywa się poprzez wciskanie przycisku BUTTON1.
 
 \begin{figure}[H]  % H - obraz dokladnie w tym miejscu, t - u gory etc..
 	\centering
 	\includegraphics[width=1.0\linewidth]{blok}  % zalacza grafike z rozciagnieciem na cala linie  
-	\caption{Schemat blokowy układu }
+	\caption{ Schemat blokowy licznika dla pierwszego wariantu. }
 	\label{fig:block_bcd_segment}
 \end{figure}
 
-\lipsum[2]
 
-\lstinputlisting[label=lst_mod10,caption=Licznik modulo 10 ,language=VHDL]{mod10.vhd}
+\lstinputlisting[label=lst_mod10,caption=Rewersyjny licznik modulo 10 ,language=VHDL]{mod10.vhd}
 
-\lipsum[3]
 
-\lstinputlisting[label=lst_mod10,caption=Dekoder bcd to 7 segment ,language=VHDL]{decod.vhd}
+\lstinputlisting[label=lst_bcd,caption=Dekoder bcd na 7 segment ,language=VHDL]{decod.vhd}
 
 
 \subsection{Przebiegi czasowe układu:}
-\lipsum[5]
+Na rysunkach \ref{fig:symhex0}, \ref{fig:symhex1}, \ref{fig:symhex2}, \ref{fig:symhex3} zostały przedstawione przebiegi czasowe potwierdzające poprawne działanie
+licznika rewersyjnego dla pierwszego wariantu. Przycisk BT1 generuje kolejne impulsy zliczające,
+natomiast przełącznik suwakowy SW1 steruje kierunkiem zliczanych impulsów (góra, dół).
+
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{up_down_1}
-	\caption{liczy do tylu}
+	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0)}
 	\label{fig:symhex0}
 \end{figure}
 
-\lipsum[6]
+
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{up_down_2}
-	\caption{liczy do tylu do 0 i do przodu patrz na bt3}
-	\label{fig:symhex0}
+	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0 $\longrightarrow$ SW0=1) zmiana pozycji przełącznika suwakowego SW0 przy skrajnych wartościach	}
+	\label{fig:symhex1}
 \end{figure}
 
-\lipsum[7]
+
 
 \begin{figure}[H]
-	\centering
+
+S	\centering
 	\includegraphics[width=1.0\linewidth]{up_down_inv_1}
-	\caption{liczy do przodu }
-	\label{fig:symhex0}
+	\caption{Przebiegi czasowe – zliczanie w górę (SW0=1) }
+	\label{fig:symhex2}
 \end{figure}
 
-\lipsum[7]
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{up_down_inv_2}
-	\caption{liczy do przodu  oo\_O i do tylu}
+	\caption{Przebiegi czasowe – zliczanie w górę (SW0=1 $\longrightarrow$ SW0=0) zmiana pozycji przełącznika suwakowego SW0 przy skrajnych wartościach }
+	\label{fig:symhex3}
+\end{figure}
+
+\section{ Drugi wariant realizacji projektu licznika}
+
+Realizacja drugiego wariantu polegała na połączeniu dwóch liczników modulo 10 do zliczania
+impulsów jedności i dziesiątek, odpowiednie przypisanie wejśd liczników skutkuje odpowiednio
+zwiększaniem się liczb na wyświetlaczu po wciśnięciu przycisku BUTTON1, natomiast zmniejszaniu się
+wartości po wciśnięciu przycisku BUTTON0.
+
+\begin{figure}[H]  % H - obraz dokladnie w tym miejscu, t - u gory etc..
+	\centering
+	\includegraphics[width=1.0\linewidth]{blok1}  % zalacza grafike z rozciagnieciem na cala linie  
+	\caption{ Schemat blokowy licznika dla drugiego wariantu. }
+	\label{fig:block1}
+\end{figure}
+
+\lstinputlisting[label=lst_mod10_1,caption=Rewersyjny licznik modulo 10 ,language=VHDL]{mod10_1.vhd}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{up_down_1_2}
+	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0)}
 	\label{fig:symhex0}
 \end{figure}
 
 \section{Wnioski}
 
-\lipsum[8]
+Celem wykonywanego dwiczenia było zapoznanie się z zasadą działania licznika, oraz jego budową
+koniecznymi do realizacji dwóch wariantów licznika rewersyjnego w oprogramowaniu Quartus II. Przy
+wykorzystaniu języka VHDL utworzyliśmy nowy bloczek w postaci licznika modulo 10, odpowiednie
+połączenie dwóch takich elementów współpracującymi z dekoderami z poprzedniego projektu w
+efekcie umożliwiało zaobserwowanie poprawnego działania licznika rewersyjnego.
+
+Odpowiedni amodyfikacja schematu blokowego wraz z kilkoma zmianami w kodzie VHDL umożliwiała realizację
+pierwszego wariantu. Utworzony projekt poddawaliśmy testom na poprawnośd działania,
+przeprowadzone symulacje są potwierdzeniem założeo projektowych. Ze względu na ograniczony
+czas przeznaczony na realizację projektu nie udało się zrealizowad drugiego wariantu, natomiast w
+wyniku analizy założeo w sprawozdaniu umieszczono możliwe sposoby realizacji pozwalających
+sfinalizowad założenia drugiej opcji.
+
+
 
 \begin{thebibliography}{0}
   \bibitem{l2short} John Wiley and Sons Publishers.

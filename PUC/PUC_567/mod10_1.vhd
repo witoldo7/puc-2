@@ -1,0 +1,1 @@
+/home/witek/Dokumenty/latex/Sprawozdania/PUC/PUC_567/PUC_2/mod10_1.vhd

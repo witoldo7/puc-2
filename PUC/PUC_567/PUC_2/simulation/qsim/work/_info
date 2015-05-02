@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/witek/Dokumenty/quartus/PUC/simulation/qsim
+vcw3
+Z1 !s100 3c;HVdC4LzmGKR`mBdH061
+Z2 IgZ3Dol0ET<zmQGLaPQa8m3
+Z3 VG_VYeeGCkIkDeNz959`OC2
+Z4 d/home/witek/Dokumenty/quartus/PUC/simulation/qsim
+Z5 w1430574776
+Z6 8cw3.vo
+Z7 Fcw3.vo
+L0 32
+Z8 OV;L;10.1e;51
+r1
+31
+Z9 !s90 -work|work|cw3.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1430574776.533238
+Z12 !s107 cw3.vo|
+!s101 -O0
+vcw3_vlg_check_tst
+!i10b 1
+Z13 !s100 =dT8LCB41X2B35Y:Hn09U1
+Z14 I`@]n`FnSJ;S4zKnYK;>Pf0
+Z15 VlC>Y;=<8:F<TG@C9ogJ0H3
+R4
+Z16 w1430574771
+Z17 8Waveform1.vwf.vt
+Z18 FWaveform1.vwf.vt
+L0 62
+R8
+r1
+!s85 0
+31
+Z19 !s108 1430574776.565153
+Z20 !s107 Waveform1.vwf.vt|
+Z21 !s90 -work|work|Waveform1.vwf.vt|
+!s101 -O0
+R10
+vcw3_vlg_sample_tst
+!i10b 1
+Z22 !s100 >fJ1l<gDz@W;7kgOjZXKd3
+Z23 I>T4G9F8:AYWfF;_29cES61
+Z24 V`DB1<d68RLJmX0kK2I[g43
+R4
+R16
+R17
+R18
+L0 30
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vcw3_vlg_vec_tst
+!i10b 1
+!s100 Eo3a^P<`a8fZZeZ@Zf20M3
+If_YLYjQ630^Z_MPnTUQZS2
+Z25 VDgHIQO3Tj=k<Eo:M6Q3VV3
+R4
+R16
+R17
+R18
+Z26 L0 621
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
