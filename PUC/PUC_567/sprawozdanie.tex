@@ -1,3 +1,4 @@
+% !TeX spellcheck = pl_PL
 \documentclass{classrep}
 \usepackage[utf8x]{inputenc}
 \usepackage[a4paper, left=1.5cm, right=1.5cm, top=1.0cm, bottom=1.5cm, headsep=0.5cm, headheight=13pt]{geometry}
@@ -75,27 +76,27 @@
 
 \section{Cel ćwiczenia:}
 % tu tekst
-Używając języka VHDL zrealizowad projekt licznika rewersyjnego dla dwóch możliwych wariantów: 
+Używając języka VHDL zrealizować projekt licznika rewersyjnego dla dwóch możliwych wariantów: 
 
-- stan licznika wyświetlany na dwóch wyświetlaczach siedmiosegmentowych, zliczanie układu w górę
+- stan licznika wyświetlany na dwóch wyświetlaczach siedmiu-segmentowych, zliczanie układu w górę
 oraz w dół sterowane za pomocą przełącznika suwakowego SW0, przycisk BUTTON1 źródłem
 zliczania impulsów
 
-- stan licznika wyświetlany na dwóch wyświetlaczach siedmiosegmentowych, zliczanie układu w górę
+- stan licznika wyświetlany na dwóch wyświetlaczach siedmiu-segmentowych, zliczanie układu w górę
 po wciśnięciu przycisku BUTTON1, natomiast zliczanie układu w dół po wciśnięciu przycisku BUTTON0
 
 
 \section{Pierwszy wariant realizacji zadania}
 \label{sec:pierw} % tworzy etykiete do ktorej sie mozna odwolac 
-Realizacja pierwszego wariantu polegała na połączeniu dwóch liczników modulo 10 do zliczania
-impulsów jedności i dziesiątek, odpowiednie przypisanie wejśd liczników skutkuje zwiększaniem się
+Realizacja pierwszego wariantu polegała na połączeniu dwóch liczników nodulo 10 do zliczania
+impulsów jedności i dziesiątek, odpowiednie przypisanie wejść liczników skutkuje zwiększaniem się
 liczb na wyświetlaczu po ustawieniu przełącznika suwakowego w pozycji górnej, natomiast
 zmniejszaniu się wartości po ustawieniu przełącznika SW0 w pozycji dolnej. Zliczanie impulsów
 odbywa się poprzez wciskanie przycisku BUTTON1.
 
 \begin{figure}[H]  % H - obraz dokladnie w tym miejscu, t - u gory etc..
 	\centering
-	\includegraphics[width=1.0\linewidth]{blok}  % zalacza grafike z rozciagnieciem na cala linie  
+	\includegraphics[width=1.0\linewidth]{blok.png}  % zalacza grafike z rozciagnieciem na cala linie  
 	\caption{ Schemat blokowy licznika dla pierwszego wariantu. }
 	\label{fig:block_bcd_segment}
 \end{figure}
@@ -117,7 +118,7 @@ natomiast przełącznik suwakowy SW1 steruje kierunkiem zliczanych impulsów (g�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\linewidth]{up_down_1}
+	\includegraphics[width=1.0\linewidth]{up_down_1.png}
 	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0)}
 	\label{fig:symhex0}
 \end{figure}
@@ -126,7 +127,7 @@ natomiast przełącznik suwakowy SW1 steruje kierunkiem zliczanych impulsów (g�
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\linewidth]{up_down_2}
+	\includegraphics[width=1.0\linewidth]{up_down_2.png}
 	\caption{Przebiegi czasowe – zliczanie w dół (SW0=0 $\longrightarrow$ SW0=1) zmiana pozycji przełącznika suwakowego SW0 przy skrajnych wartościach	}
 	\label{fig:symhex1}
 \end{figure}
@@ -136,7 +137,7 @@ natomiast przełącznik suwakowy SW1 steruje kierunkiem zliczanych impulsów (g�
 \begin{figure}[H]
 
 S	\centering
-	\includegraphics[width=1.0\linewidth]{up_down_inv_1}
+	\includegraphics[width=1.0\linewidth]{up_down_inv_1.png}
 	\caption{Przebiegi czasowe – zliczanie w górę (SW0=1) }
 	\label{fig:symhex2}
 \end{figure}
@@ -144,7 +145,7 @@ S	\centering
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\linewidth]{up_down_inv_2}
+	\includegraphics[width=1.0\linewidth]{up_down_inv_2.png}
 	\caption{Przebiegi czasowe – zliczanie w górę (SW0=1 $\longrightarrow$ SW0=0) zmiana pozycji przełącznika suwakowego SW0 przy skrajnych wartościach }
 	\label{fig:symhex3}
 \end{figure}
@@ -152,7 +153,7 @@ S	\centering
 \section{ Drugi wariant realizacji projektu licznika}
 
 Realizacja drugiego wariantu polegała na połączeniu dwóch liczników modulo 10 do zliczania
-impulsów jedności i dziesiątek, odpowiednie przypisanie wejśd liczników skutkuje odpowiednio
+impulsów jedności i dziesiątek, odpowiednie przypisanie wejść liczników skutkuje odpowiednio
 zwiększaniem się liczb na wyświetlaczu po wciśnięciu przycisku BUTTON1, natomiast zmniejszaniu się
 wartości po wciśnięciu przycisku BUTTON0.
 
@@ -162,7 +163,7 @@ kodu w języku VHDL.\\
 
 \begin{figure}[H]  % H - obraz dokladnie w tym miejscu, t - u gory etc..
 	\centering
-	\includegraphics[width=1.0\linewidth]{blok1}  % zalacza grafike z rozciagnieciem na cala linie  
+	\includegraphics[width=1.0\linewidth]{blok1.png}  % zalacza grafike z rozciagnieciem na cala linie  
 	\caption{ Schemat blokowy licznika dla drugiego wariantu. }
 	\label{fig:block1}
 \end{figure}
@@ -176,7 +177,7 @@ Przebiegi potwierdzają poprawne działanie licznika dla drugiego wariantu reali
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\linewidth]{up_down_1_2}
+	\includegraphics[width=1.0\linewidth]{up_down_1_2.png}
 	\caption{Przebiegi czasowe dla drugiego wariantu – ciąg impulsów BT0 oraz BT1 i widoczne
 	wartości na wyświetlaczach}
 	\label{fig:symhex4}
@@ -191,18 +192,18 @@ połączenie dwóch takich elementów współpracującymi z dekoderami z poprzed
 efekcie umożliwiało zaobserwowanie poprawnego działania licznika rewersyjnego. 
 
 Odpowiednio zrealizowany schemat blokowy wraz z funkcjonalnym kodem VHDL umożliwia poprawne działanie
-pierwszego wariantu. Utworzony projekt poddawaliśmy testom na poprawnośd działania,
-przeprowadzone symulacje są potwierdzeniem założeo projektowych. Drugi wariant projektu jest
+pierwszego wariantu. Utworzony projekt poddawaliśmy testom na poprawność działania,
+przeprowadzone symulacje są potwierdzeniem założeń projektowych. Drugi wariant projektu jest
 odpowiednią modyfikacją schematu blokowego pierwszej opcji, konieczne było odpowiednie
 zaimplementowanie przycisków BT0 oraz BT1 do generowania impulsów zliczających w górę o raz w
 dół. Kilka zmian w listingu bloczku modulo 10 zapewniło finalny efekt w postaci poprawnie
 działającego układu zliczającego licznika. 
 
 Podobnie jak w pierwszym przypadku po zaprogramowaniu
-układu poddawaliśmy go testom na poprawnośd. Jednym z pojawiających się problemów przy
+układu poddawaliśmy go testom na poprawność. Jednym z pojawiających się problemów przy
 realizacji projektu było nie poprawne zliczanie impulsów w przypadku zmiany kierunku zliczania dla
 skrajnych wartości na wyświetlaczu (np. dla wartości 9, 19, 10, 20 itp.). Pojawiający problem u dało
-się jednak wyeliminowad poprzez odpowiednią modyfikację kodu VHDL bloczku mod\_10.
+się jednak wyeliminowywać poprzez odpowiednią modyfikację kodu VHDL bloczku mod\_10.
 
 
 

@@ -30,15 +30,16 @@ endfunction
 
 //poczatkowe zmieniie
 eps=0.001;
+//okresla przedziały dla metody bisekcji
 a = [0.5, -1.5, -2.5];
 b = [2, 0.5, -1 ];
 
 //pierwsze okno zrob i wczysc
 scf(1); clf(1); xgrid;
 
-//wykres 
-xp = linspace(a(3), b(1), 1000);
-plot(xp, f(xp))
+
+xp = linspace(a(3), b(1), 1000); // tworzy wektor
+plot(xp, f(xp)) //kresli wykres
 
 //rozwiaznie rownania
 linespec = {'bo', 'ro', 'go'}; 
