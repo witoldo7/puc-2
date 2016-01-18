@@ -1,0 +1,68 @@
+% vim:encoding=utf8 ft=tex sts=2 sw=2 et:
+
+\documentclass{classrep}
+\usepackage[utf8x]{inputenc}
+\usepackage[a4paper, left=1.0cm, right=1.0cm, top=1.0cm, bottom=2.0cm, headsep=0.5cm, headheight=15pt]{geometry}
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+
+\lstdefinelanguage{VHDL}{
+	morekeywords={
+		library,use,all,entity,is,port,in,out,end,architecture,of,
+		begin,and,LIBRARY,USE,ALL,ENTITY,IS,PORT,IN,OUT,END,ARCHITECTURE,OF,BEGIN,AND
+	},
+	morecomment=[l]--
+}
+
+\usepackage{xcolor}
+\colorlet{keyword}{blue!100!black!80}
+\colorlet{comment}{green!90!black!90}
+\lstdefinestyle{vhdl}{
+	language     = VHDL,
+	basicstyle   = \ttfamily,
+	keywordstyle = \color{keyword}\bfseries,
+	commentstyle = \color{comment}
+}
+\lstset{language=VHDL,style=vhdl}
+
+\usepackage{hyperref} % musi być na końcu
+\hypersetup{pdfborder={0 0 0 0}}
+
+
+\studycycle{Elektronika i Telekomunikacja, studia dzienne, mgr II st.}
+\coursesemester{II}
+
+\coursename{Procesy stochastyczne w elektronice}
+\courseyear{2015/2016}
+
+\courseteacher{dr inż. Robert Hanus}
+\coursegroup{środa, 12:00}
+
+\author{
+  \studentinfo{Witold Olechowski}{127517} \and
+  \studentinfo{Grzegorz Pelczar}{125242} \and
+  \studentinfo{Tomasz Marecik}{127374} 
+}
+
+\title{Zadanie : }
+
+%\lstinputlisting{block1.vhdl}
+%\vskip 2\baselineskip
+
+\begin{document}
+\maketitle
+
+\section{gf}
+
+\section{Wnioski}
+\begin{itemize}
+	\item 
+\end{itemize}
+
+\begin{thebibliography}{0}
+  \bibitem{l2short} Robert Hanus,
+    \textsl{Instrukcje laboratoryjne,} Politechnika Rzeszowska, Rzeszów, 2015
+\end{thebibliography}
+\end{document}

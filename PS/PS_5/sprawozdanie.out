@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Cel cwiczenia}{}% 1
+\BOOKMARK [1][-]{section.2}{Wyznaczanie wzajemnej gestosci widmowej mocy \(WGWM\)}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Zaobserwowane zosta\233y przebiegi modu\233u i fazy WGWM i ich zmiany w miare wzrostu liczby usrednien. Nastawy modu\233u Delay00 dla op\363znienia r\363wnego 2 ms pokazano na rys. 2, 3, 4 }{section.2}% 3
+\BOOKMARK [1][-]{section.3}{Zastosowanie charakterystyki fazowej wzajemnej gestosci widmowej mocy do pomiaru op\363znienia}{}% 4
+\BOOKMARK [2][-]{subsection.3.1}{Dla nastaw modu\233\363w Delay00: Delay Data by 0,002 Seconds, Slider00: 200 uruchomiono program i zaobserwowano wskazania miernik\363w.}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.2}{Dla tych samych ustawien modu\233u Delay00 por\363wnac wyniki wyznaczania op\363znienia dla nastaw modu\233u Slider00 w zakresie 10200 przy tej samej liczbie usrednien.}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.3}{Uk\233ad z schematu 2 rozbudowac o dodatkowe modu\233y umozliwiajace symulacje zak\233\363cen w sygnale op\363znionym \(rys. 9\)}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.4}{Do uk\233adu z schematy 3 dodac tor do wyznaczania funkcji koherencji \(rys. 13 \).}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.5}{Rozbudowano uk\233ad o tor do wyznaczania odchylenia standardowego op\363znienia \(rys. 16\)}{section.3}% 9
+\BOOKMARK [1][-]{section*.1}{Literatura}{}% 10
